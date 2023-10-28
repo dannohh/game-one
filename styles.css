@@ -1,0 +1,30 @@
+#game-container {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+#game-text {
+    height: 300px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#user-input {
+    width: 80%;
+}
+
+#submit-button {
+    margin-top: 10px;
+}
+
+#background-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url();
+  background-size: cover;
+}
