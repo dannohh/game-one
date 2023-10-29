@@ -1,6 +1,7 @@
 #game-container {
+    position: absolute;
     width: 600px;
-    margin: auto;
+    height: 600px;
     text-align: center;
 }
 
@@ -13,18 +14,17 @@
 }
 
 #user-input {
-    width: 80%;
+
 }
 
 #submit-button {
     margin-top: 10px;
+    position: absolute;
 }
 
 #background-container {
-  position: absolute;
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-image: url();
   background-size: cover;
 }

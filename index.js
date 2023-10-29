@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gameText.innerText = "Welcome to the game! What will you do first?";
 
-
-    submitButton.addEventListener("click", () => {
-        const input = userInput.value;
-        // TODO: Handle the user input here
-        console.log(input);
-    });
+    //
+    // submitButton.addEventListener("click", () => {
+    //     const input = userInput.value;
+    //     // TODO: Handle the user input here
+    //     console.log(input);
+    // });
 
     let playerAttributes = {
       health: 10,
@@ -121,7 +121,7 @@ const GAME_STATES = {
     action: () => {
       playerAttributes.health--;
       playerAttributes.exp++;
-      if(playerAttributes.health < 50){
+      if(playerAttributes.health < 1){
         currentState = "DEAD"
       }
     },
@@ -154,6 +154,10 @@ setInterval(() => {
     console.log('exp: ',playerAttributes.exp);
     updateState();
 }, 30000); // Trigger after 5 seconds
+
+setInterval(() => {
+  saveGame();
+}, 2000)
 
 
 function updateState() {
