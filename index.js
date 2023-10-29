@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       exp: 1
     }
 
+
     function saveGame() {
       localStorage.setItem('gameState', JSON.stringify({
         currentState,
@@ -83,7 +84,7 @@ const GAME_STATES = {
     },
   },
   TAKE_TREASURE: {
-    text: "You take the treasure and live happily ever after.",
+    text: "You take the treasure.",
     action: () => {
       playerAttributes.inventory.push("Treasure");
       console.log(playerAttributes)
@@ -121,9 +122,7 @@ const GAME_STATES = {
     action: () => {
       playerAttributes.health--;
       playerAttributes.exp++;
-      if(playerAttributes.health < 1){
-        currentState = "DEAD"
-      }
+      saveGame()
     },
     options: [
       {
@@ -164,6 +163,9 @@ function updateState() {
   if (Math.random() < 0.2) { // 20% chance of encounter
     currentState = 'ENCOUNTER_MONSTER';
 
+}
+  if(playerAttributes.health < 1){
+  currentState = "DEAD"
 }
 
   const state = GAME_STATES[currentState];
