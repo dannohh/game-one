@@ -10,7 +10,6 @@
 
 #game-text {
     position: absolute;
-    color: white;
     padding: 10px;
     overflow-y: auto;
     transform: translate(-50%, -50%);
@@ -38,7 +37,8 @@
 .option-button {
   height: 10%;
   width: 20%;
-  opacity: .7;
   background-color: royalblue ;
   font-style: italic;
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
