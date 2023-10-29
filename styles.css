@@ -1,30 +1,44 @@
 #game-container {
     position: absolute;
     width: 600px;
-    height: 600px;
+    height: 400px;
     text-align: center;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
 }
 
 #game-text {
-    height: 300px;
-    border: 1px solid black;
-    margin-bottom: 10px;
+    position: absolute;
+    color: white;
     padding: 10px;
     overflow-y: auto;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 #user-input {
 
 }
 
-#submit-button {
+/* #submit-button {
     margin-top: 10px;
     position: absolute;
-}
+} */
 
 #background-container {
   height: 100%;
   width: 100%;
   z-index: -1;
   background-size: cover;
+}
+.option-button {
+  height: 10%;
+  width: 20%;
+  opacity: .7;
+  background-color: royalblue ;
+  font-style: italic;
 }
