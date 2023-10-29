@@ -50,14 +50,14 @@ const GAME_STATES = {
     ],
   },
   EXPLORE: {
-    text: "You decide to explore and find hidden treasure. Now what?",
+    text: "You decide to explore. Which way will you go?",
     options: [
       {
-        text: "take it",
-        next: "TAKE_TREASURE"
+        text: "Keep going",
+        next: "LEAVE"
       },
       {
-        text: "leave it",
+        text: "Turn left",
         next: "LEAVE"
       }
     ],
@@ -92,7 +92,7 @@ const GAME_STATES = {
     options: []
   },
   LEAVE: {
-    text: "You leave the treasure and continue on your journey",
+    text: "You continue on your journey",
     options: [
       {
         text: "Explore",
@@ -160,9 +160,12 @@ setInterval(() => {
 
 
 function updateState() {
+  console.log("state updated")
   if (Math.random() < 0.2) { // 20% chance of encounter
     currentState = 'ENCOUNTER_MONSTER';
-
+}
+if (Math.random() < 0.05) { // 20% chance of encounter
+  currentState = 'TAKE_TREASURE';
 }
   if(playerAttributes.health < 1){
   currentState = "DEAD"
